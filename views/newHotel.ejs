@@ -1,0 +1,46 @@
+<%- include('partials/header');-%>
+
+<div class="container d-flex justify-content-center text-css">
+<form action="/hotelIndex" method="post" class="shadow p-4 mt-4 " style="width:600px" novalidate enctype="multipart/form-data">
+    <div class="row mb-3">
+        <label for="name" class="col-sm-2 col-form-label">Hotel Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter a Hotel Name">
+        </div>
+      </div>
+    <div class="row mb-3">
+      <label for="email" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter a Hotel Email">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="address" class="col-sm-2 col-form-label">address</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="address" name="address" placeholder="Enter a Hotel Address">
+      </div>
+    </div>
+    <div class="row mb-3">
+        <label for="price" class="col-sm-2 col-form-label">price</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="price" name="price" placeholder="Enter a Hotel Price">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="description" class="col-sm-2 col-form-label">description</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="description" name="description" placeholder="Enter a Hotel Description">
+        </div>
+      </div>
+      <div class="form-floating mb-3">
+        <div class="input-group mb-3">
+            <label class="me-4" for="inputGroupFile01">Add Images</label>
+            <input name="image" type="file" class="form-control" id="inputGroupFile01" multiple required>
+        </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Add Hotel</button>
+  </form>
+
+</div>
+<%- include('partials/footer');-%>

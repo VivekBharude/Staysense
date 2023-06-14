@@ -1,0 +1,30 @@
+
+<%- include('partials/header');-%>
+
+<div class="login  ">
+
+</div>
+
+<div class="login-color">
+
+</div>
+<div class="container  login-pos shadow ">
+  <div class="col-md-4 mt-4 p-4   ">
+    <div class="mb-2 text-center fs-3 fw-bold" style="font-family: Roboto; font-weight: 700; color:#2E8A99 ;">LOGIN</div>
+  <form action="/login" method="post">
+    <div class="mb-3">
+      <label for="username" class="form-label fw-semibold fs-7">Username</label>
+      <input type="username" class="form-control shadow " style="border-radius: 0; width: 400px;" id="username" name="username" placeholder="Enter Username" >
+    </div>
+      <div class="mb-3">
+        <label for="password" class="form-label fw-semibold fs-7">Password</label>
+        <input type="password" class="form-control shadow " style="border-radius: 0; width: 400px;" id="password" name="password" placeholder="Enter Password">
+      </div>
+     
+      <button type="submit" class="btn btn-primary login-btn" >LOGIN</button>
+    </form>
+  </div>
+  </div>
+
+  <%- include('partials/footer');-%>
+

@@ -1,0 +1,47 @@
+<%- include('partials/header');-%>
+
+<div class="container d-flex justify-content-center text-css">
+
+  <form action="/hotelIndex/<%= hotel._id %>?_method=PATCH" method="post" style="width: 600px;"  >
+      <div class="row mb-3">
+          <label for="name" class="col-sm-2 col-form-label">Hotel Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="hotel[name]" value="<%= hotel.name %>">
+          </div>
+        </div>
+      <div class="row mb-3">
+        <label for="email" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email" name="hotel[email]" value="<%= hotel.email %>">
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label for="address" class="col-sm-2 col-form-label">City</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="address" name="hotel[address]" value="<%= hotel.address %>">
+        </div>
+      </div>
+      <div class="row mb-3">
+          <label for="price" class="col-sm-2 col-form-label">price</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="price" name="hotel[price]" value="<%= hotel.price %>">
+          </div>
+        </div>
+      <div class="form-floating mb-3">
+        <div class="input-group mb-3">
+            <label class="me-4" for="inputGroupFile01">Add Images</label>
+            <input name="image" type="file" class="form-control" id="inputGroupFile01" multiple >
+        </div>
+    </div>
+        <div class="row mb-3">
+          <label for="description" class="col-sm-2 col-form-label">description</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="description" name="description" value="<%= hotel.description%>">
+          </div>
+        </div>
+      
+      <button type="submit" class="btn btn-primary">Update Hotel</button>
+    </form>
+</div>
+<%- include('partials/footer');-%>
