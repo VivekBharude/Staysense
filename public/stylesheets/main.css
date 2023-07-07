@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
 }
+
 .brand{
     font-size: 40px;
     font-family: Playfair Display;
@@ -14,6 +15,155 @@ body{
     font-weight: 500;
     color:#000000;
 }
+
+/* lanfing css */
+
+.landing-text{
+    position: absolute; 
+    top:32%; 
+    left: 25%;
+     color:rgb(255, 255, 255); 
+     opacity:90 ; 
+     width: 900px; 
+     z-index: 1;
+}
+.landing-img{
+    height: 100vh;
+    
+
+}
+.landing-btn{
+    border-radius: 0; 
+    width: 150px; 
+    height: 50px;
+     margin-right: 80px;
+     background-color: #2E8A99;
+     border-radius: 4px;
+     border-color: #2E8A99;
+    color:white;
+    font-size: 25px;
+    
+}
+.landing-welcome{
+    font-size: 40px;
+}
+.landing-p{
+    font-size: 70px; 
+    font-weight: 500;
+}
+
+.section-overly::after{
+    position: absolute;
+    content: "";
+    background-color:#19376D;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-repeat: no-repeat
+}
+@media (max-width:499px) {
+    #carousel{
+        width:100%; 
+    }
+    .landing-text{
+     position: absolute; 
+     text-align: center;
+     color:rgb(255, 255, 255); 
+     opacity:90 ; 
+     width: 50%; 
+     z-index: 1;
+    }
+    .landing-btn{
+        width: 100px; 
+        height: 40px;
+        margin-left: 50px;
+        color:white;
+       font-size: 15px;
+       font-family: abel;
+       font-weight: 500;
+       padding: 10px;
+    }
+    .landing-welcome{
+        font-size: 15px;
+    }
+    .landing-p{
+        font-size: 20px; 
+        font-weight: 500;
+        overflow-wrap: break-word;
+    }
+
+}
+@media (min-width:500px) and (max-width:1000px) {
+    #carousel{
+        width:100%; 
+    }
+    .landing-text{
+     position: absolute; 
+     text-align: center; 
+     margin-top: 100px;
+     color:rgb(255, 255, 255); 
+     opacity:90 ; 
+     width: 50%;
+     z-index: 1;
+    }
+    .landing-btn{
+        width: 180px; 
+        height: 60px;
+        margin-left: 70px;
+        color:white;
+        font-size: 25px;
+        font-family: abel;
+        font-weight: 500;
+        
+    }
+    .landing-welcome{
+        font-size: 25px;
+    }
+    .landing-p{
+        font-size: 40px; 
+        font-weight: 500;
+       
+    }
+    .section-overly::after{
+        position: absolute;
+        content: "";
+        background-color:#19376D;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background-repeat: no-repeat
+    }
+
+}
+
+
+
+@media (max-width:499px){
+    .review-img{
+        width:300px;
+        height:300px;
+    }
+}
+@media (min-width:500px) and (max-width:1000px){
+    .review-img{
+        width:350px;
+        height:350px;
+    }
+}
+
+
+
+
+
+
 .login{
     background-image:url('/images/Landing/photo-1616486338812-3dadae4b4ace.avif');
    
@@ -21,7 +171,8 @@ body{
         width: 100vw;
         height: 50vh;
     background-position: 50%;
-    opacity: 50%;
+   
+    opacity: 90%;
     
     
     
@@ -35,18 +186,18 @@ body{
     top: -150px;
     background-color: white;
 }
-.login-color::after{
+.login-color{
     position: absolute;
-    content: "";
+    opacity: 50%;
     background-color:#19376D;
     width: 100%;
     height: 50%;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
     z-index: -1;
     background-repeat: no-repeat
+}
+.login-input{
+    border-radius: 0;
+     width: 400px;
 }
 .login-btn{
     background-color: #2E8A99;
@@ -54,15 +205,36 @@ body{
     border: none;
     width: 400px;
 }
-
-section{
-    height: 100vh;
-    
+@media (max-width:499px){
+    .login-input{
+        
+         width: 300px;
+    }
+    .login-btn{
+        width: 300px;
+    } 
 }
-.section-pos{
+@media (min-width:500px) and (max-width:1000px){
+    .login-input{
+        
+        width: 100%;
+   }
+   .login-btn{
+       width: 100%;
+   }
+}
+.section-aboutus{
+    margin-top: 100px;
+    margin-bottom:100px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.section-pos{
+    margin-top: 100px;
+    margin-bottom:100px;
+    
 }
 .text-css{
     font-size: 15px;
@@ -77,19 +249,7 @@ section{
     color: rgb(171, 171, 171);
     margin-bottom: 4px;
 }
-.section-overly::after{
-    position: absolute;
-    content: "";
-    background-color:#19376D;
-    width: 100%;
-    height: 750px;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    background-repeat: no-repeat
-}
+
 .aboutus-heading{
    font-size: 40px;
    font-family: Abel;
@@ -99,6 +259,25 @@ section{
    
 
 }
+.about-us-heading{
+    margin-top: 40px;
+    margin-left: 40px;
+ }
+@media (max-width:1000px){
+      .aboutus-heading{
+        text-align: center;
+        margin: 0;
+      }
+      .aboutus-para{
+        text-align: center;
+        margin: 0;
+      }
+     .about-us-heading{
+      
+        margin-left: 0;
+     }
+}
+
 .aboutus-para{
     font-size: 25px;
     font-family: Abel;
@@ -118,10 +297,7 @@ section{
     
 
 }
-.ameneties-border{
-    border: 2px solid #2E8A99;
-   
-}
+
 .ameneties-icon{
     height: 150px; 
     width: 150px; 
@@ -132,16 +308,144 @@ section{
      height: 1px; 
      width: 60px; 
 }
-.ameneties-description{
-    font-size: 17px;
-    font-weight: 500;
-    font-family: Roboto;
-    width: 300px;
-    margin-left: 20px;
+.ameneties-border-top{
+    border-top: 2px solid #2E8A99;
+   
 }
+.ameneties-border-right{
+    border-right: 2px solid #2E8A99;
+   
+}
+.ameneties-title{
+    
+}
+
+
+@media (max-width:499px){
+    .ameneties-icon{
+        height: 150px; 
+        width: 150px; 
+        background-color: #F1EFEE;
+    }
+    .ameneties-description{
+        font-size: 17px;
+        font-weight: 500;
+        font-family: Roboto;
+        width: 200px;
+        margin-left: 20px;
+    }
+    .ameneties-border-top{
+        border-top: none;
+       
+    }
+    .ameneties-border-right{
+        border-right:none;
+       
+    }
+    
+    .line-ameneties{
+        background-color: #2E8A99;
+         height: 1px; 
+         width: 60px; 
+    }
+}
+@media (min-width:500px) and (max-width:1000px){
+    .ameneties-icon{
+        height: 150px; 
+        width: 150px; 
+        background-color: #F1EFEE;
+    }
+    .ameneties-description{
+        font-size: 17px;
+        font-weight: 500;
+        font-family: Roboto;
+        width: 200px;
+        margin-left: 20px;
+    }
+   
+    
+    
+}
+
+
+.landing-review{
+    width: 18rem;
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+.review-heading{
+    font-family: Abel;
+     font-weight: 900;
+    text-align: center;
+}
+.review-para{
+    font-family: Abel;
+    text-align: center;
+}
+.review-auther{
+    display: flex;
+    justify-content: center;
+}
+.review-img{
+    width:100%;
+    height: 500px;
+    margin-top: 30px;
+}
+
+
 .review{
     margin-top: 120px;
+  
 }
+
+
+
+
+
+
+
+
+
+/* hotel index */
+
+.hotelindex{
+    width: 900px;
+    border: none; 
+    border-radius: 0;
+    
+}
+.hotelindex-img{
+    width:300px;
+     height:250px;
+}
+@media (min-width:600px) and (max-width:1000px){
+    
+    .hotelindex-img{
+        width:240px;
+         height:250px;
+    }
+    .about-img{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .mob-no{
     font-size: 20px;
     font-weight: 500;
@@ -154,4 +458,40 @@ section{
     font-family: Roboto;
     margin: 0;
     padding: 0;
+}
+.footer-css{
+    width: 900px;
+}
+.footer-list{
+    text-align: left;
+    padding: 0;
+}
+@media (max-width:499px){
+    .footer-css{
+        width: 100%;
+    }
+    .footer-list{
+        text-align: left;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mob-no{
+        text-align: center;
+    }
+    .brand{
+    text-align:center ;
+    }
+    .footer-text{
+        text-align: center;
+    }
+}
+@media (min-width:500px), (max-width:1000px){
+    .footer-list{
+        text-align: left;
+        padding: 0;
+       
+        
+    }
 }

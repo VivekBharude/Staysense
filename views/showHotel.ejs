@@ -35,7 +35,7 @@
         <p class="fs-5 "><%= hotel.address %></p>
     </div>
     <div class="row">
-        <div class="col-8" >
+        <div class="col-lg-8 col-md-7 mb-4" >
             <div >
                 <div >
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -67,8 +67,8 @@
                 </div>
 
         </div>
-        <div class="col-md-4">
-            <div class="card text-center" style="width:;">
+        <div class="col-lg-4 col-md-5">
+            <div class="card text-center" >
                 <ul class="list-group list-group-flush px-4 mb-4">
                   <li class="list-group-item">
                         <h5 style="width: 100%; max-width: 100%; color:rgb(179, 178, 178); font-weight: 600;">Average Rating: </h5>
@@ -182,9 +182,9 @@
          
      
 
-
+<div class="container">
     <div class=" row mt-4" >
-        <div class="col-md-8 card"> 
+        <div class="col-lg-8 col-md-7 card"> 
             <div class="text-center mt-4 ">
                 <h4>About the Hotel</h4>
             </div>
@@ -195,33 +195,39 @@
                 </p>
             </div>
         </div>
-        <div class="col-md-4 text-center mt-2">
-            <h6 style="width: 100%; max-width: 100%;">Address: 
-             <div><%= hotel.address %></div>
+        <div class="col-lg-4 col-md-5 text-center  card">
+            <h6 >Address: 
             </h6>
+            <hr>
+            <div class="fs-6"><%= hotel.address %></div>
         </div>
     </div>
        <div class="row">
-        <div class=" card my-4 pb-md-3 col-md-8" style="height: 300px;">
+        <div class=" card my-4 pb-md-3 col-md-7 col-lg-8" >
             <div class="text-center mt-4">
                 <h2 class="h4">Amenities</h2>
             </div>
                 
             <hr>
-            <ul class="list-unstyled row row-cols-lg-3 row-cols-md-2 row-cols-1 gy-1 mt-4 text-nowrap">
-                <li class="col"><i class="fa-solid fa-wifi p-2"></i>Wifi</li>
-                <li class="col"><i class='fas fa-swimmer  p-2' style='font-size:24px'></i>swimming pool
-                </li>
-                <li class="col"><i class="fa-solid fa-table-tennis-paddle-ball  p-2"></i>Indoor Games</li>
-                <li class="col"><i class="fa-solid fa-square-parking  p-2"></i>Free parking</li>
-                <li class="col"><i class="fa-solid fa-spa  p-2"></i>Spa lounge</li>
-                <li class="col"><i class="fa-solid fa-utensils  p-2" style="color: #080808;"></i>Restaurant</li>
-                <li class="col"><i class="fa-solid fa-bell-concierge  p-2"></i>Room service</li>
-                <li class="col"><i class='fas fa-wine-bottle  p-2'></i>Bar</li>
-                <li class="col"><i class="fa-solid fa-dumbbell  p-2"></i>Fitness Center</li>
-            </ul>
+            <div class="row">
+                <div class="col-md-4 ">
+                    <p><i class="fa-solid fa-wifi p-2"></i>Wifi</p>
+                    <p><i class='fas fa-swimmer  p-2' style='font-size:24px'></i>swimming pool</p>
+                    <p> <i class="fa-solid fa-table-tennis-paddle-ball  p-2"></i>Indoor Games</p>
+                </div>
+                <div class="col-md-4">
+                     <p><i class="fa-solid fa-square-parking  p-2"></i>Free parking</p>
+                     <p><i class="fa-solid fa-spa  p-2"></i>Spa lounge</p>
+                     <p><i class="fa-solid fa-utensils  p-2" style="color: #080808;"></i>Restaurant</p>
+                </div>
+                <div class="col-md-4">
+                     <p><i class="fa-solid fa-bell-concierge  p-2"></i>Room service</p>
+                     <p><i class='fas fa-wine-bottle  p-2'></i>Bar</p>
+                     <p><i class="fa-solid fa-dumbbell  p-2"></i>Fitness Center</p>
+                </div>
+            </div>
         </div>
-        <div class="col-4 mt-4" style="height: 300px;">
+        <div class="col-lg-4  col-md-5  mt-4" style="height: 260px;">
             <div id="map"></div>
         </div>
 
@@ -231,7 +237,7 @@
     
 
     <div class="row">
-        <div class="col-4 shadow text-center p-4">
+        <div class="col-lg-4 col-md-6 shadow text-center p-4 my-4">
             <legend class="">Rating & Reviews</legend>
             <form class="mt-5 needs-validation " action="/hotelIndex/<%= hotel._id %>/reviews" method="post" >
                 <div class="d-flex flex-row justify-content-center">
@@ -258,7 +264,7 @@
             </form>
         </div>
        
-        <div class="col-md-8  ps-4">
+        <div class="col-md-6  ps-4">
             <div>
                 <h1>Reviews</h1>
             </div>
@@ -301,6 +307,7 @@
         </div>
         </div>
 
+</div>
 </div>
 
 
@@ -354,4 +361,4 @@
 
 
 
-<%- include('partials/footer');-%>
+        <%- include('partials/footer');-%>

@@ -69,6 +69,6 @@ app.use(reviewRoutes);
 
 
 const PORT = process.env.PORT;
-app.listen(6001,()=>{
+app.listen(`PORT`,()=>{
     console.log('server connected to port ' + PORT);
 });
