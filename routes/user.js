@@ -8,7 +8,7 @@ const { isLoggedIn } = require('../middlewares');
 router.get('/user/:id' ,isLoggedIn, async(req,res)=>{
     try {
      let user = await User.findById(req.params.id);
-    res.render('user/show', { user });
+      res.render('user/show', { user });
           
     } catch (error) {
         console.log(error);
